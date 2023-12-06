@@ -26,11 +26,11 @@ const App = () => {
     const {lenguaje,mensaje} = formData;
     var texto = "";
     if (lenguaje == "chileno"){
-      texto = "traduce esto de español"+ lenguaje+" a español neutro:" +mensaje;
+      texto = "traduce esto de español"+ lenguaje+" a español neutro directamente, sin agregar explicaciones extras ni explayandose mas de lo debido:" +mensaje;
     } else texto = "traduce esto a"+ lenguaje+":" +mensaje; 
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
-      messages: [{ role: 'user', content: texto}],
+      messages: [{role: "system", content:"Eres un traductor de idiomas, solo entregas la traduccion pedida"},{ role: 'user', content: texto}],
       temperature: 0.3,
       max_tokens: 256,
     });
@@ -65,6 +65,7 @@ const App = () => {
 
   return <div className='container'>
     <h1>Traductor</h1>
+    <h4>Elija un idioma de entrada</h4>
 
     <form onSubmit={handleOnSubmit}>
       <div className='choices'>
@@ -104,6 +105,10 @@ const App = () => {
     </div>
     <div className={`notificacion ${showNotification ? "active" : ""}`}>
       Copiado al portapapeles
+    </div>
+    
+    <div className='diccionario'>
+      <a class='fill-div' href='/about/'>Diccionario</a>
     </div>
   </div>;
 };

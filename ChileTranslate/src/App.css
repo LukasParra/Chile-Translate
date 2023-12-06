@@ -112,3 +112,24 @@ h1 {
 .error {
   color:#e63946;
 }
+
+.diccionario {
+  padding: 12px 32px;
+  background: #9bd7eefd;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 40%;
+  display:flex;
+
+  border-radius: 32px;
+}
+
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  font-size: large;
+  font:bold;
+
+}
