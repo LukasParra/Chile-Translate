@@ -3,7 +3,7 @@
 Es un traductor de Modismo Chilenos que tiene el objetivo de ayudar a los extranjeros ha entender los modismos chilenos
 
 ### Para acceder a la app ingresa aquí  
--> https://inquisitive-squirrel-651f8b.netlify.app/
+-> https://657085950d18610d67e9c788--stately-genie-af12a8.netlify.app/
 
 # Explicación del uso de la Aplicación
 
